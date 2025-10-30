@@ -9,7 +9,7 @@ Phần **Backend** được viết bằng **FastAPI (siêu nhẹ)** và **Fronte
 ## 🏗️ Cấu trúc thư mục
 
 
-
+```css
 TTTN/
 ├── backend/              # Code backend API (FastAPI)
 │   ├── app/
@@ -25,7 +25,7 @@ TTTN/
 ├── run_all.py            # Script điều phối chính
 └── README.md             # File hướng dẫn này
 
-`
+```
 
 ---
 
