@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+elasticsearch==8.11.1
+python-dotenv
+fastapi-cors
+sentence-transformers 
+torch==2.3.0          
+requests

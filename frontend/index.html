@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng Điện tử - Gợi ý Thông minh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <!-- ✅ Thêm liên kết quay về trang chủ -->
+            <h1>
+                <a href="index.html" class="home-link" aria-label="Quay về trang chủ">
+                    <i class="fas fa-bolt"></i> Cửa hàng Điện tử
+                </a>
+            </h1>
+
+            <form id="search-form">
+                <select id="category-select" aria-label="Chọn loại sản phẩm">
+                    <option value="">-- Tất cả loại --</option>
+                </select>
+                <input type="search" id="search-input" placeholder="Tìm laptop, tai nghe..." aria-label="Nhập từ khóa tìm kiếm">
+                <button type="submit" aria-label="Tìm kiếm"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="keyword-results-section" aria-live="polite" style="display: none;">
+            <h2 id="keyword-results-title">Kết quả tìm kiếm</h2>
+            <div id="keyword-results-grid" class="product-grid"></div>
+            <p id="keyword-message" class="message"></p>
+        </section>
+
+        <section id="semantic-suggestions-section" style="display: none;">
+            <h2 id="semantic-title"><i class="fas fa-lightbulb"></i> Gợi ý liên quan</h2>
+            <div id="semantic-suggestions-grid" class="product-grid suggestions-grid"></div>
+            <p id="semantic-message" class="message"></p>
+        </section>
+
+        <section id="all-products-section">
+            <h2><i class="fas fa-th-large"></i> Khám phá Sản phẩm</h2>
+            <div id="product-grid" class="product-grid">
+                <p class="message">Đang tải sản phẩm...</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="product-modal" class="modal" aria-hidden="true">
+        <div class="modal-overlay" tabindex="-1" data-micromodal-close></div>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <header class="modal-header">
+                <h2 class="modal-title" id="modal-title">Chi tiết</h2>
+                <button class="modal-close" aria-label="Đóng" data-micromodal-close><i class="fas fa-times"></i></button>
+            </header>
+            <main class="modal-content" id="modal-content-main">
+                <div class="modal-product-details"><p>Đang tải...</p></div>
+                <aside class="modal-recommendations">
+                    <h3>Sản phẩm tương tự</h3>
+                    <div id="modal-recommendation-list"><p>Đang tải...</p></div>
+                </aside>
+            </main>
+            <footer class="modal-footer">
+                <button class="modal-btn" data-micromodal-close aria-label="Đóng">Đóng</button>
+            </footer>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container"><p>&copy; 2025</p></div>
+    </footer>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
