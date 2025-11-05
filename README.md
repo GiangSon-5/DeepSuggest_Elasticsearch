@@ -105,7 +105,7 @@ Tạo file `.env` tại thư mục gốc (hoặc sao chép từ `.env.example`) 
 ```
 ES_HOST=http://localhost:9200
 INDEX_NAME=products
-EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+EMBEDDING_MODEL=...
 ```
 
 ---
@@ -216,6 +216,10 @@ python scripts/evaluate_similarity.py
 * Kiểm tra Backend (FastAPI docs):
   👉 [http://localhost:8000/docs](http://localhost:8000/docs)
 
+  **Truy cập:**
+    * **Trang web:** `http://localhost:5173/` (Hoặc mở file `frontend/index.html`)
+    * **Backend API Docs:** `http://localhost:8000/docs`
+    * **Kibana (Xem data):** `http://localhost:5601`
 ---
 
 ## 🎯 Kết luận
